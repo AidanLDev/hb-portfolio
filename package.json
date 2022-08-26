@@ -1,0 +1,26 @@
+{
+  "name": "hb-portfolio",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "devDependencies": {
+    "@astrojs/netlify": "^1.0.1",
+    "@astrojs/react": "latest",
+    "@astrojs/sitemap": "latest",
+    "astro": "latest",
+    "prettier": "^2.7.1",
+    "prettier-plugin-astro": "^0.5.3",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "dependencies": {
+    "@types/react": "^18.0.17",
+    "sass": "^1.54.5"
+  }
+}
