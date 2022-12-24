@@ -1,14 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
-// import { Picture } from '@astrojs/image/components';
+import { Picture } from '@astrojs/image/components';
 ---
 
 <Layout title="Astro Boilerplate">
 	<main>
 		<h1>Welcome to <span class="text-gradient">Harry Bell's Portfolio</span></h1>
-		<!-- <Picture src='/images/acting.webp' widths={[200, 400, 800]} sizes="(max-width: 800px) 100vw, 800px"  /> -->
-		<!-- TODO: npm install --save-dev @astrojs/image because worklaptop doesn't allow self-signed certificates to be installed... -->
+		<Picture aspectRatio='4:3' src='/images/acting.webp' widths={[200, 300, 800]} sizes="(max-width: 300px) 100vw, 800px"  />
 	</main>
 </Layout>
 
@@ -25,6 +24,7 @@ import Card from "../components/Card.astro";
 		margin: auto;
 		padding: 1em;
 		max-width: 60ch;
+		height: 100vh - 66px;
 	}
 
 	.text-gradient {
