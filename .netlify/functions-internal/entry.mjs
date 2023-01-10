@@ -7,7 +7,7 @@ import { dim, bold, red, yellow, cyan, green } from 'kleur/colors';
 import sizeOf from 'image-size';
 import fs from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
-import { S as Styles } from './chunks/404.b58b3506.f34134f7.mjs';
+import { S as Styles } from './chunks/404.273d488f.2ba2c9f6.mjs';
 /* empty css                                 *//* empty css                                   */import 'cookie';
 import 'string-width';
 import 'path-browserify';
@@ -226,7 +226,7 @@ function createComponent(arg1, moduleId) {
   }
 }
 
-const ASTRO_VERSION = "1.7.2";
+const ASTRO_VERSION = "1.9.1";
 
 function createDeprecatedFetchContentFn() {
   return () => {
@@ -633,6 +633,16 @@ Expected \`true\` value but got \`${suffix}\`.`;
     code: 7002,
     message: (legacyConfigKey) => `Legacy configuration detected: \`${legacyConfigKey}\`.`,
     hint: "Please update your configuration to the new format.\nSee https://astro.build/config for more information."
+  },
+  UnknownCLIError: {
+    title: "Unknown CLI Error.",
+    code: 8e3
+  },
+  GenerateContentTypesError: {
+    title: "Failed to generate content types.",
+    code: 8001,
+    message: "`astro sync` command failed to generate content collection types.",
+    hint: "Check your `src/content/config.*` file for typos."
   },
   UnknownError: {
     title: "Unknown Error.",
@@ -2243,7 +2253,7 @@ const _page0 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	get
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$Astro$5 = createAstro("C:/Users/aidan/Documents/Repos/hb-portfolio/src/components/Nav/Nav.astro", "https://harrybell.netlify.app/", "file:///C:/Users/aidan/Documents/Repos/hb-portfolio/");
+const $$Astro$5 = createAstro("C:/Repos/Training/hb-portfolio/src/components/Nav/Nav.astro", "https://harrybell.netlify.app/", "file:///C:/Repos/Training/hb-portfolio/");
 const $$Nav = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$5, $$props, $$slots);
   Astro2.self = $$Nav;
@@ -2252,14 +2262,14 @@ const $$Nav = createComponent(async ($$result, $$props, $$slots) => {
   <a href="/about">About Me</a>
   <a href="/contact">Contact Me</a>
 </nav>`;
-}, "C:/Users/aidan/Documents/Repos/hb-portfolio/src/components/Nav/Nav.astro");
+}, "C:/Repos/Training/hb-portfolio/src/components/Nav/Nav.astro");
 
-const $$Astro$4 = createAstro("C:/Users/aidan/Documents/Repos/hb-portfolio/src/layouts/Layout.astro", "https://harrybell.netlify.app/", "file:///C:/Users/aidan/Documents/Repos/hb-portfolio/");
+const $$Astro$4 = createAstro("C:/Repos/Training/hb-portfolio/src/layouts/Layout.astro", "https://harrybell.netlify.app/", "file:///C:/Repos/Training/hb-portfolio/");
 const $$Layout = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$4, $$props, $$slots);
   Astro2.self = $$Layout;
   const { title } = Astro2.props;
-  return renderTemplate`<html lang="en" class="astro-RYABA7AZ">
+  return renderTemplate`<html lang="en" class="astro-RN4KHWEL">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width">
@@ -2267,28 +2277,27 @@ const $$Layout = createComponent(async ($$result, $$props, $$slots) => {
 		<meta name="generator"${addAttribute(Astro2.generator, "content")}>
 		<title>${title}</title>
 	${renderHead($$result)}</head>
-	${renderComponent($$result, "Nav", $$Nav, { "class": "astro-RYABA7AZ" })}
-	<body class="astro-RYABA7AZ">
+	${renderComponent($$result, "Nav", $$Nav, { "class": "astro-RN4KHWEL" })}
+	<body class="astro-RN4KHWEL">
 		${renderSlot($$result, $$slots["default"], renderTemplate`
-			<p class="astro-RYABA7AZ">Well come on, put some content in me</p> <!--	Will be used as a placeholder if no children are passed to the component  -->
+			<p class="astro-RN4KHWEL">Well come on, put some content in me</p> <!--	Will be used as a placeholder if no children are passed to the component  -->
 		`)} <!--	Slot is the React equiv of {children} -->
 	
 </body></html>`;
-}, "C:/Users/aidan/Documents/Repos/hb-portfolio/src/layouts/Layout.astro");
+}, "C:/Repos/Training/hb-portfolio/src/layouts/Layout.astro");
 
-const $$Astro$3 = createAstro("C:/Users/aidan/Documents/Repos/hb-portfolio/src/pages/index.astro", "https://harrybell.netlify.app/", "file:///C:/Users/aidan/Documents/Repos/hb-portfolio/");
+const $$Astro$3 = createAstro("C:/Repos/Training/hb-portfolio/src/pages/index.astro", "https://harrybell.netlify.app/", "file:///C:/Repos/Training/hb-portfolio/");
 const $$Index = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$3, $$props, $$slots);
   Astro2.self = $$Index;
-  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "Astro Boilerplate", "class": "astro-JAFWK4MZ" }, { "default": () => renderTemplate`${maybeRenderHead($$result)}<main class="astro-JAFWK4MZ">
-		<h1 class="astro-JAFWK4MZ">Welcome to <span class="text-gradient astro-JAFWK4MZ">Harry Bell's Portfolio</span></h1>
-		<!-- <Picture aspectRatio='4:3' src='/images/acting.webp' alt="Actors" widths={[200, 300, 800]} sizes="(max-width: 300px) 100vw, 800px"  /> -->
+  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "Astro Boilerplate", "class": "astro-DD5UNS2D" }, { "default": () => renderTemplate`${maybeRenderHead($$result)}<main class="astro-DD5UNS2D">
+		<h1 class="astro-DD5UNS2D">Welcome to <span class="text-gradient astro-DD5UNS2D">Harry Bell's Portfolio</span></h1>
 	</main>` })}
 
 `;
-}, "C:/Users/aidan/Documents/Repos/hb-portfolio/src/pages/index.astro");
+}, "C:/Repos/Training/hb-portfolio/src/pages/index.astro");
 
-const $$file$3 = "C:/Users/aidan/Documents/Repos/hb-portfolio/src/pages/index.astro";
+const $$file$3 = "C:/Repos/Training/hb-portfolio/src/pages/index.astro";
 const $$url$3 = "";
 
 const _page1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
@@ -2298,29 +2307,29 @@ const _page1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	url: $$url$3
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$Astro$2 = createAstro("C:/Users/aidan/Documents/Repos/hb-portfolio/src/pages/contact.astro", "https://harrybell.netlify.app/", "file:///C:/Users/aidan/Documents/Repos/hb-portfolio/");
+const $$Astro$2 = createAstro("C:/Repos/Training/hb-portfolio/src/pages/contact.astro", "https://harrybell.netlify.app/", "file:///C:/Repos/Training/hb-portfolio/");
 const $$Contact = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$2, $$props, $$slots);
   Astro2.self = $$Contact;
-  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "Contact Me", "class": "astro-PKZV5WQ6" }, { "default": () => renderTemplate`${maybeRenderHead($$result)}<h1 class="astro-PKZV5WQ6">
+  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "Contact Me", "class": "astro-PMVBWPRN" }, { "default": () => renderTemplate`${maybeRenderHead($$result)}<h1 class="astro-PMVBWPRN">
     You can find me on:
-  </h1><ul class="astro-PKZV5WQ6">
-    <li class="astro-PKZV5WQ6">
+  </h1><ul class="astro-PMVBWPRN">
+    <li class="astro-PMVBWPRN">
       Instagram
     </li>
-    <li class="astro-PKZV5WQ6">
+    <li class="astro-PMVBWPRN">
       Facebook
     </li>
-    <li class="astro-PKZV5WQ6">
+    <li class="astro-PMVBWPRN">
       Linkedin
     </li>
-    <li class="astro-PKZV5WQ6">
+    <li class="astro-PMVBWPRN">
       Email @
     </li>
   </ul>` })}`;
-}, "C:/Users/aidan/Documents/Repos/hb-portfolio/src/pages/contact.astro");
+}, "C:/Repos/Training/hb-portfolio/src/pages/contact.astro");
 
-const $$file$2 = "C:/Users/aidan/Documents/Repos/hb-portfolio/src/pages/contact.astro";
+const $$file$2 = "C:/Repos/Training/hb-portfolio/src/pages/contact.astro";
 const $$url$2 = "/contact";
 
 const _page2 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
@@ -2330,16 +2339,16 @@ const _page2 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	url: $$url$2
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$Astro$1 = createAstro("C:/Users/aidan/Documents/Repos/hb-portfolio/src/pages/about.astro", "https://harrybell.netlify.app/", "file:///C:/Users/aidan/Documents/Repos/hb-portfolio/");
+const $$Astro$1 = createAstro("C:/Repos/Training/hb-portfolio/src/pages/about.astro", "https://harrybell.netlify.app/", "file:///C:/Repos/Training/hb-portfolio/");
 const $$About = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
   Astro2.self = $$About;
   return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "About Me" }, { "default": () => renderTemplate`${maybeRenderHead($$result)}<h1>A short introduction into the life of HB</h1><p>Minim laboris velit est laborum excepteur duis fugiat culpa. Commodo adipisicing et velit laboris pariatur ex eu qui laboris ullamco sunt proident voluptate. Duis est aliquip veniam ullamco minim est eiusmod aliqua consequat magna minim mollit cillum proident.</p><p>
     Pariatur excepteur esse nulla anim proident enim non est sint incididunt et eiusmod. Eu aliquip laborum ea nostrud nulla irure minim eu ullamco nisi. Magna dolore consectetur occaecat ex do nulla reprehenderit non ullamco aliquip nulla non. Lorem et nulla quis reprehenderit sint aute elit.
   </p>` })}`;
-}, "C:/Users/aidan/Documents/Repos/hb-portfolio/src/pages/about.astro");
+}, "C:/Repos/Training/hb-portfolio/src/pages/about.astro");
 
-const $$file$1 = "C:/Users/aidan/Documents/Repos/hb-portfolio/src/pages/about.astro";
+const $$file$1 = "C:/Repos/Training/hb-portfolio/src/pages/about.astro";
 const $$url$1 = "/about";
 
 const _page3 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
@@ -2349,15 +2358,15 @@ const _page3 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	url: $$url$1
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$Astro = createAstro("C:/Users/aidan/Documents/Repos/hb-portfolio/src/pages/404.astro", "https://harrybell.netlify.app/", "file:///C:/Users/aidan/Documents/Repos/hb-portfolio/");
+const $$Astro = createAstro("C:/Repos/Training/hb-portfolio/src/pages/404.astro", "https://harrybell.netlify.app/", "file:///C:/Repos/Training/hb-portfolio/");
 const $$404 = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$404;
   const pathName = Astro2.url.pathname;
   return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "404 - page not found" }, { "default": () => renderTemplate`${maybeRenderHead($$result)}<h1>404: Not Found</h1><h2>Path: ${pathName} could not be found</h2>` })}`;
-}, "C:/Users/aidan/Documents/Repos/hb-portfolio/src/pages/404.astro");
+}, "C:/Repos/Training/hb-portfolio/src/pages/404.astro");
 
-const $$file = "C:/Users/aidan/Documents/Repos/hb-portfolio/src/pages/404.astro";
+const $$file = "C:/Repos/Training/hb-portfolio/src/pages/404.astro";
 const $$url = "/404";
 
 const _page4 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
@@ -2367,7 +2376,7 @@ const _page4 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	url: $$url
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const pageMap = new Map([['node_modules/@astrojs/image/dist/endpoint.js', _page0],['src/pages/index.astro', _page1],['src/pages/contact.astro', _page2],['src/pages/about.astro', _page3],['src/pages/404.astro', _page4],]);
+const pageMap = new Map([["node_modules/@astrojs/image/dist/endpoint.js", _page0],["src/pages/index.astro", _page1],["src/pages/contact.astro", _page2],["src/pages/about.astro", _page3],["src/pages/404.astro", _page4],]);
 const renderers = [Object.assign({"name":"astro:jsx","serverEntrypoint":"astro/jsx/server.js","jsxImportSource":"astro"}, { ssr: server_default }),Object.assign({"name":"@astrojs/react","clientEntrypoint":"@astrojs/react/client.js","serverEntrypoint":"@astrojs/react/server.js","jsxImportSource":"react"}, { ssr: _renderer1 }),];
 
 if (typeof process !== "undefined") {
@@ -2444,12 +2453,11 @@ function deserializeManifest(serializedManifest) {
   };
 }
 
-const _manifest = Object.assign(deserializeManifest({"adapterName":"@astrojs/netlify/functions","routes":[{"file":"","links":[],"scripts":[],"routeData":{"type":"endpoint","route":"/_image","pattern":"^\\/_image$","segments":[[{"content":"_image","dynamic":false,"spread":false}]],"params":[],"component":"node_modules/@astrojs/image/dist/endpoint.js","pathname":"/_image","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/index.f1970794.css","assets/404.53d439de.css"],"scripts":[],"routeData":{"route":"/","type":"page","pattern":"^\\/$","segments":[],"params":[],"component":"src/pages/index.astro","pathname":"/","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/contact.f4067583.css","assets/404.53d439de.css"],"scripts":[],"routeData":{"route":"/contact","type":"page","pattern":"^\\/contact\\/?$","segments":[[{"content":"contact","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/contact.astro","pathname":"/contact","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/404.53d439de.css"],"scripts":[],"routeData":{"route":"/about","type":"page","pattern":"^\\/about\\/?$","segments":[[{"content":"about","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/about.astro","pathname":"/about","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/404.53d439de.css"],"scripts":[],"routeData":{"route":"/404","type":"page","pattern":"^\\/404\\/?$","segments":[[{"content":"404","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/404.astro","pathname":"/404","_meta":{"trailingSlash":"ignore"}}}],"site":"https://harrybell.netlify.app/","base":"/","markdown":{"drafts":false,"syntaxHighlight":"shiki","shikiConfig":{"langs":[],"theme":"github-dark","wrap":false},"remarkPlugins":[],"rehypePlugins":[],"remarkRehype":{},"extendDefaultPlugins":false,"isAstroFlavoredMd":false},"pageMap":null,"renderers":[],"entryModules":{"\u0000@astrojs-ssr-virtual-entry":"entry.mjs","C:/Users/aidan/Documents/Repos/hb-portfolio/node_modules/@astrojs/image/dist/vendor/squoosh/image-pool.js":"chunks/image-pool.abfa6f7b.mjs","@astrojs/react/client.js":"client.bf4f0f8e.js","astro:scripts/before-hydration.js":""},"assets":["/assets/404.53d439de.css","/assets/contact.f4067583.css","/assets/index.f1970794.css","/client.bf4f0f8e.js","/favicon.svg","/images/acting.webp"]}), {
+const _manifest = Object.assign(deserializeManifest({"adapterName":"@astrojs/netlify/functions","routes":[{"file":"","links":[],"scripts":[],"routeData":{"type":"endpoint","route":"/_image","pattern":"^\\/_image$","segments":[[{"content":"_image","dynamic":false,"spread":false}]],"params":[],"component":"node_modules/@astrojs/image/dist/endpoint.js","pathname":"/_image","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/index.fc51d7b7.css","assets/404.53d439de.css"],"scripts":[],"routeData":{"route":"/","type":"page","pattern":"^\\/$","segments":[],"params":[],"component":"src/pages/index.astro","pathname":"/","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/contact.2de48a68.css","assets/404.53d439de.css"],"scripts":[],"routeData":{"route":"/contact","type":"page","pattern":"^\\/contact\\/?$","segments":[[{"content":"contact","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/contact.astro","pathname":"/contact","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/404.53d439de.css"],"scripts":[],"routeData":{"route":"/about","type":"page","pattern":"^\\/about\\/?$","segments":[[{"content":"about","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/about.astro","pathname":"/about","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/404.53d439de.css"],"scripts":[],"routeData":{"route":"/404","type":"page","pattern":"^\\/404\\/?$","segments":[[{"content":"404","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/404.astro","pathname":"/404","_meta":{"trailingSlash":"ignore"}}}],"site":"https://harrybell.netlify.app/","base":"/","markdown":{"drafts":false,"syntaxHighlight":"shiki","shikiConfig":{"langs":[],"theme":"github-dark","wrap":false},"remarkPlugins":[],"rehypePlugins":[],"remarkRehype":{},"extendDefaultPlugins":false,"isAstroFlavoredMd":false,"isExperimentalContentCollections":false,"contentDir":"file:///C:/Repos/Training/hb-portfolio/src/content/"},"pageMap":null,"renderers":[],"entryModules":{"\u0000@astrojs-ssr-virtual-entry":"entry.mjs","C:/Repos/Training/hb-portfolio/node_modules/@astrojs/image/dist/vendor/squoosh/image-pool.js":"chunks/image-pool.abfa6f7b.mjs","@astrojs/react/client.js":"client.bf4f0f8e.js","astro:scripts/before-hydration.js":""},"assets":["/assets/404.53d439de.css","/assets/contact.2de48a68.css","/assets/index.fc51d7b7.css","/client.bf4f0f8e.js","/favicon.svg","/images/acting.webp"]}), {
 	pageMap: pageMap,
 	renderers: renderers
 });
 const _args = {};
-
 const _exports = adapter.createExports(_manifest, _args);
 const handler = _exports['handler'];
 
