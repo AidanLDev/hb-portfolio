@@ -22,10 +22,9 @@ export default function RootLayout({
         <ChakraProvider>
           <nav className="nav">
             <ul>
-              <a href="#contact-me">contact me</a>
-              <Link as={NextLink} _hover={{ color: 'blue.500' }} href="#demos" >Demos</Link>
-              <Link as={NextLink} _hover={{ color: 'blue.500' }} href="#about-me">About Me</Link>
-              <Link as={NextLink} _hover={{ color: 'blue.500' }} href="#contact-me">Contact Me</Link>
+              <a href="#demos">Demos</a>
+              <a href="#about-me">About Me</a>
+              <a href="#contact-me">Contact Me</a>
             </ul>
           </nav>
           {children}
