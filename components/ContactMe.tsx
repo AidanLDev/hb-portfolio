@@ -11,5 +11,5 @@ export const ContactMe: React.FC<props> = (): JSX.Element => (
     <input></input>
     <label>Query</label>
     <textarea rows={5}></textarea>
-</div>
+  </div>
 );
