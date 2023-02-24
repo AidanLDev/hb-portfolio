@@ -1,20 +1,20 @@
 /** @type {import('next').NextConfig} */
 
-const path = require('node:path');
-
+const path = require("node:path");
 
 const nextConfig = {
   experimental: {
-    appDir: true,
+    appDir: false,
   },
+  images: { unoptimized: true },
   webpack(config) {
     config.resolve.alias = {
       ...config.resolve.alias,
-      '@styles': path.resolve(__dirname, 'src/styles'),
+      "@styles": path.resolve(__dirname, "src/styles"),
     };
 
     return config;
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
