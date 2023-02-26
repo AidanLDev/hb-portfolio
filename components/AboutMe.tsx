@@ -6,7 +6,7 @@ export interface props {}
 
 export const AboutMe: React.FC<props> = (): JSX.Element => (
   <div id="about-me">
-    <Heading>About Me</Heading>
+    <Heading pb={20}>About Me</Heading>
     <div>
       <p>
         Velit mollit officia minim ea sit commodo. Laboris enim id laboris

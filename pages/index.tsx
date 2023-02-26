@@ -1,10 +1,11 @@
 import Image from 'next/image'
 import Head from 'next/head'
 import styles from '../styles/page.module.scss'
-import { Demos } from 'components/Demos'
+import { Demos } from 'components/Demos/Demos'
 import { AboutMe } from 'components/AboutMe'
-import { ContactMe } from 'components/ContactMe'
+import { ContactMe } from 'components/ContactMe/ContactMe'
 import Nav from 'components/Nav'
+import { Heading } from '@chakra-ui/react'
 
 
 export default function Home() {
@@ -17,14 +18,8 @@ export default function Home() {
             <link rel="icon" href="/favicon.ico" />
         </Head>
         <Nav />
-      <div className={styles.description}>
-        <p>
-          Harry Talks - +44 7506 005026
-        </p>
-        <div>
-          The voice over specialist
-        </div>
-      </div>
+        {/* Make a nice heading */}
+        <Heading p="20px 0">The voice over specialist</Heading>
 
       <div className={styles.center}>
         <Image
